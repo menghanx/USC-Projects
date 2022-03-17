@@ -1,0 +1,12 @@
+*.tar
+*.gz
+*.tgz
+*.zip
+zip files
+HW*/data
+HW*/data.*
+HW*/Experiment_data
+HW*/test
+HW*/.DS_Store
+CS544-pungen
+CS544-pungen/**

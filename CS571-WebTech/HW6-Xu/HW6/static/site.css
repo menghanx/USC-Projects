@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+body{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 20px;
+    margin-bottom: 250px;
+}
+
+/* Working on form here 
+________________________________________________________
+
+*/
+
+.required {
+    color: red;
+}
+
+.container{
+    max-width: 1250px;
+    width: 100%;
+    height: 100%;   
+}
+
+.title-container{
+    height: 120px;
+    width: 580px;
+    margin: 0px auto;
+    margin-top: 40px;
+    background-image: url("/static/Images/banner.jpg");
+    background-position-y: -80px;
+    padding: 30px 40px 20px 40px;
+    border: 1px solid #d8d8d8;
+}
+   
+
+form {
+    height: 330px;
+    width: 580px;
+    margin: 0px auto;
+    padding: 20px 40px 40px 40px;
+    background: #fff;
+    box-shadow: 0 2px #cfcfcf;
+    border: 1px solid #d8d8d8
+}
+
+.form-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.form-intro {
+    font-size: 1.2em;
+}
+
+
+
+.city-state-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .location-details .city-state-container .input-box {
+    width: calc(100%/2 - 20px);
+    margin: 20px 0 20px 0;
+}
+
+.input-details{
+    color: #738aa8;
+    
+}
+
+.street-input {
+    width: 100%;
+}
+
+#street {
+    margin-top: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+#city {
+    margin-top: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+select {
+    margin-top: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+hr{
+    color: #86b4f0;
+}
+
+.detect-location{
+    margin: 20px 0 30px 0;
+}
+
+.detect-location .input-details {
+    font-size: 1em;
+}
+
+.btn-submit{
+    font-size: 1em;
+    background-color: #4e70b0;
+    color: white;
+    width: 100px;
+    height: 45px;
+    box-shadow: 0 4px #364463;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #7088b4;
+}
+
+.btn-submit:focus {
+    background-color: #4e70b0;
+    border: 1px solid black;
+}
+
+.btn-submit::after {
+    background-color: #4e70b0;
+    border: 1px solid black;
+}
+
+.btn-clear{
+    font-size: 1em;
+    background-color: #fcb400;
+    color: white;
+    width: 100px;
+    height: 45px;
+    box-shadow: 0 4px #fb8603;
+    border: none;
+}
+
+.btn-clear:hover{
+    background-color: #fcc63d;
+}
+
+
+.btn-clear:focus{
+    background-color: #fcb400;
+    border: 1px solid black;
+}
+
+.btn-clear::after{
+    background-color: #fcb400;
+    border: 1px solid black;
+}
+
+/* Working on No reuslt section here 
+________________________________________________________
+
+*/
+
+.no-result-section{
+    display: none;
+    width: 580px;
+    height: 30px;
+    line-height: 30px;
+    margin: 60px auto;
+    text-align: center;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px #cfcfcf;
+    border: 1px solid #d8d8d8
+}
+
+.no-result-section p{
+    color: #092936;
+}
+
+/* Working on weahter card here 
+________________________________________________________
+
+*/
+
+.weather-card-wrapper {
+    display: none;
+}
+
+.weather-card-container{
+    max-height: 450px;
+    width: 800px;
+    margin: 60px auto;
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    border: 2px solid #d8d8d8;
+}
+
+.weather-card-container:hover {
+    box-shadow: 0px 5px 10px #a39f9f;
+  }
+
+.result-location-section {
+    grid-row: span 3;
+    width: 100%;
+    color: #909090;
+    font-size: 1.6em;
+}
+
+#weather-city-state-title {
+    margin: 20px 40px;
+}
+
+.icon-temp-section {
+    grid-row: span 9;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.weather-icon{
+    grid-column: span 1;
+    height: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(13, 1fr);
+}
+
+.weather-icon-img-section{
+    grid-row: span 10;
+    background-size: auto 160px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.weather-icon-text-section{
+    grid-row: span 3;
+    color: #828282;
+    font-size: 1.4em;
+}
+
+.weather-temperature{
+    grid-column: span 3;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    font-size: 9em;
+    color: #828282;
+    font-weight:300
+}
+
+#weather-card-temp {
+    padding-bottom: 40px;
+}
+.weather-stats-section{
+    grid-row: span 8;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.weather-stat-cell{
+    text-align: center;
+    color: #828282;
+    padding-top: 10px;
+}
+.stats-text {
+    padding: 10px 0;
+}
+
+.stats-icons{
+    padding: 10px 0;
+}
+
+.weather-stat-cell img {
+    max-width: 33%;  
+}
+
+
+/* Working on table here 
+________________________________________________________
+
+*/
+.weather-table-wrapper {
+    width: 1250px;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th{
+    background-color: #4f6eae;
+    height: 50px;
+    text-align: center;
+}
+
+tr {
+    height: auto;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table_row_icon {
+    width: 70px;
+}
+
+weather-table #table-header{
+    height: 30px;
+}
+
+/* Working on detail result here 
+________________________________________________________
+
+*/
+
+.detail-container{
+    display: none;
+    width: 570px;
+    margin: 0 auto;
+    height: auto;
+    
+}
+.detail-section {
+    width: 570px;
+    height: 460px; 
+    display: grid;
+    background: linear-gradient(white , #364668);
+    grid-template-rows: repeat(9, 1fr); 
+    border: 1px solid #d8d8d8;
+}
+
+.detail-section:hover {
+    box-shadow: 0px 5px 10px #a39f9f;
+  }
+
+.detail-title {
+    margin: auto;
+    width: 320px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1{
+    font-weight: normal;
+    color: #092936;
+    /* border-bottom: 1px solid #f1f0f0; */
+    padding-bottom: 10px
+}
+
+
+.top-detail{
+    grid-row: span 4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.top-left-detail{
+    grid-column: span 3;
+    padding: 15px;
+}
+
+.top-left-detail #weather-detail-date {
+    font-size: 1.8em;
+    color: #394c71;
+    padding-bottom: 10px;
+}
+
+.top-left-detail #weather-detail-desc {
+    font-size: 1.8em;
+    color: #394c71;
+    padding-bottom: 15px;
+}
+
+.weather-detail-temp {
+    font-size: 2.2em;
+    color: #394c71;
+}
+
+.top-right-detail{
+    grid-column: span 2;
+    background-size: auto 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bottom-detail{
+    grid-row: span 5;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.bottom-detail p {
+    padding: 5px;
+}
+
+.bottom-left-detail{
+    grid-column: span 3;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.bottom-right-detail{
+    grid-column: span 2;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.weather-chart-container{
+    display: none;
+}
+
+.weather-chart-title{
+    margin: auto;
+    width: 320px;
+    text-align: center;
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-section {
+    display: flex;
+    justify-content: center;
+}
+
+#down-arrow {
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#up-arrow {
+    display: none;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.temp-range-chart-container {
+    display: none;
+    text-align: center;
+}
+
+
+#chart1 {
+    height: 400px;
+    text-align: center;
+}
+
+.hourly-weather-chart-container {
+    display: none;
+    margin-top: 30px;
+}
+
+/* Make charts stay in the center and width */
+.highcharts-figure, .highcharts-data-table table {
+    width: 950px;
+    margin: 1em auto;
+}

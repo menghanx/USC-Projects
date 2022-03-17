@@ -1,0 +1,48 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th scope="row">Status</th>
+            <td>{{status(dayData.values.weatherCode)}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Max Temperature</th>
+            <td>{{dayData.values.temperatureMax}} °F</td>
+        </tr>
+        <tr>
+            <th scope="row">Min Temperature</th>
+            <td>{{dayData.values.temperatureMin}} °F</td>
+        </tr>
+        <tr>
+            <th scope="row">Apparent Temperature</th>
+            <td>{{dayData.values.temperatureApparent}} °F</td>
+        </tr>
+        <tr>
+            <th scope="row">Sun Rise Time</th>
+            <td>{{getDate(dayData.values.sunriseTime) |
+                date:'HH:mm:ss'}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Sun Set Time</th>
+            <td>{{getDate(dayData.values.sunsetTime) |
+                date:'HH:mm:ss'}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Humidity</th>
+            <td>{{dayData.values.humidity}} %</td>
+        </tr>
+        <tr>
+            <th scope="row">Wind Speed</th>
+            <td>{{dayData.values.windSpeed}} mph</td>
+        </tr>
+        <tr>
+            <th scope="row">Visibility</th>
+            <td>{{dayData.values.visibility}} mi</td>
+        </tr>
+        <tr>
+            <th scope="row">Cloud Cover</th>
+            <td>{{dayData.values.cloudCover}} %</td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="map" class="full" style="height: 500px; margin: 0 1rem"></div>

@@ -1,0 +1,83 @@
+<div class="form-container">
+    <form [formGroup]="weatherForm" (ngSubmit)="onSubmit()">
+        <div class="form-title">
+            <h3>Weather Search🌤️</h3>
+        </div>
+        <div class=" form-group row">
+            <label for="street" class="col-sm-3 col-form-label">Street<span class="required_asterisk">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="street" formControlName="street" required>
+                <div *ngIf="weatherForm.controls['street'].invalid && (weatherForm.controls['street'].dirty || weatherForm.controls['street'].touched)"
+                    class="inputAlert">
+                    <div>
+                        <!-- *ngIf="weatherForm.controls['street'].errors?.required || (weatherForm.controls['street'].dirty && weatherForm.controls['street'].invalid)"> -->
+                        Please enter a valid street
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="city" class="col-sm-3 col-form-label">City<span class="required_asterisk">*</span></label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="city" formControlName="city" required
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" md-no-cache="true" md-input-minlength="2"
+                    (optionSelected)="onSelectionChanged($event)">
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{option.city}} - {{option.state}}
+                    </mat-option>
+                </mat-autocomplete>
+                <div *ngIf="weatherForm.controls['city'].invalid && (weatherForm.controls['city'].dirty || weatherForm.controls['city'].touched)"
+                    class="inputAlert">
+                    <div>
+                        Please enter a valid city
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="state" class="col-sm-3 col-form-label">State</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="state" required formControlName="state" name="state">
+                    <option value="Ca" disabled selected>Select your state</option>
+                    <option *ngFor="let state of states" [value]="state.id">{{state.full}}</option>
+                </select>
+            </div>
+        </div>
+        <hr style="background-color: #e7e3e7;height:2px;border: none">
+        <div class="form-group row">
+            <div class="col-sm-3">Auto-detect location<span class="required_asterisk">*</span></div>
+            <div class="col-sm-9">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="auto_checkbox" formControlName="autoDetect"
+                        name="autoDetect" (change)="disableInput($event)">
+                    <label class="form-check-label" for="auto_checkbox">
+                        Current Location
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!weatherForm.valid" class="btn btn-primary" id="submit-btn">
+            <i class="bi bi-search"></i>
+            <span class="btn-text">Search</span>
+        </button>
+        <!-- <a routerLink="home"> -->
+        <!-- [routerLink]="['/']" -->
+        <button type="button" class="btn btn-default" (click)="clearForm()" id="clear-btn">
+            <i class="bi bi-list-nested"></i>
+            <span class="btn-text">Clear</span>
+        </button>
+        <!-- </a> -->
+
+
+    </form>
+</div>
+
+<!-- <div>
+    <p>street: {{weatherForm.controls['street'].value}}</p>
+    <p>city: {{weatherForm.controls['city'].value}}</p>
+    <p>state: {{weatherForm.controls['state'].value}}</p>
+    <p>autoDetect: {{weatherForm.controls['autoDetect'].value}}</p>
+</div> -->

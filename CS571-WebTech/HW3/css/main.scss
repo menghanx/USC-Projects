@@ -1,0 +1,306 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    :root{
+        --primary-color: #e8d01a;
+    }
+
+    body{
+        background:white;
+        margin: 0;
+        font-family: 'Poppins';
+    }
+
+    .navbar {
+        background: white;
+        width: 1300px;
+        padding: 2em 8em;
+        .logo{
+            text-decoration: none;
+            font-weight:400;
+            color:black;
+            font-size: 1.2em;
+        }
+        nav {
+            li{
+                display: inline;
+                margin: 0.6em;
+                a{
+                    color: #9c9c9c;
+                    text-decoration: none;
+                    font-size: 1.2em;
+                }
+            }
+        }   
+
+        .container {
+            display: flex;
+            place-content: space-between;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 5em 0em;
+    }
+
+    .hero {
+        text-align: left;
+        padding: 0;
+        height: 900px;
+        width: 1600px;
+        background: 
+            linear-gradient(
+                rgba(13, 13, 14, 0.25), 
+                rgba(12, 12, 12, 0.25)
+            ),
+            url("http://csci571.com/hw/hw3/images/lawyer.jpg");
+        background-size: cover;
+        background-size: 100%;
+        background-position:center;
+        .container{
+            position: relative;
+            .email-sign-up{
+                background:#0b3c5d;
+                float: left;
+                position: absolute;
+                width: 380px;
+                height: 480px;
+                top: 180px;
+                left: 125px;
+                padding: 2em;
+                .subhead{
+                    padding-left: 1.2em;
+                    padding-top: 1em;
+                    margin: 0em;
+                    color:white;
+                }
+                .promo-text{
+                    color:white;
+                    padding-left: 1.2em;
+                    p{
+                        margin: 0;
+                        padding : 0;
+                        line-height : 1em;
+                        font-size: 3em;
+                    }
+                    
+                }
+                .promotion {
+                    padding:1.2em;
+                    margin-bottom: 1em;
+                    font-style: italic;
+                    font-weight: 550;
+                    color: var(--primary-color);
+                }
+
+                form{
+                    padding-left: 1.2em;
+                    .email-box {
+                        margin-bottom: 2em;
+                        height: 4em;
+                        width: 25em;
+                    }
+                }
+                
+
+                .sign-up-for-free-cta{
+                    background: var(--primary-color); 
+                    text-decoration: none;
+                    padding: 0;
+                    font-size: .8em;
+                    display: block;
+                    margin-top: 1em;
+                    height: 3.5em;
+                    width: 14em;
+                }
+            }
+        }
+    
+    }
+
+    .features-section{
+        height: 400px;
+        width: 1600px;
+        .feature-item{
+            text-align: left;
+            float: left;
+            width: 29%;
+            margin: 1%;
+            padding: 1%;
+            h4{
+                font-size: 1.3em;
+                font-weight: normal;
+            }
+        }
+    }
+    
+    .quote-section{
+        background: #f4f4f4
+        ;
+        text-align: center;
+        width: 1600px;
+        blockquote{
+            font-size: 1.8em;
+        }
+        span{
+            font-weight:700;
+        }
+    }
+
+    .prices-section{
+        width: 1600px;
+        height: 1000px;
+        background-color: #fff;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("http://csci571.com/hw/hw3/images/glasses.png");
+        background-blend-mode: luminosity;
+        background-size: 165%;
+        background-position: center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        padding-top: 1em;
+        .prices-inner {
+            padding-top: 2em;
+            padding-bottom: 2em;
+            width: 1600px;
+            height: 1000px;
+        }
+    }
+
+    .price-title {
+        h4{
+            font-size: 1.5em;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-top: 1em;   
+        }
+        
+        p {
+            margin-top: 0;
+            color: #8b8989;
+            text-align: center;
+        }
+    }
+
+    .price-options{
+        display: table;
+        width: 100%; 
+        table-layout: fixed; 
+        border-spacing: 100px;
+        padding-top: 2em;
+        text-align: center;
+
+        .price-item{
+            display: table-cell;
+            margin: 1.5em;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://csci571.com/hw/hw3/images/grid.png");
+            background-color: white;
+            background-size: cover;
+            height: 600px;
+            width: 350px;
+            H4{
+                padding-top: 2em;
+                font-size: 1.2em;
+                font-weight: normal;
+                margin-bottom: 1.6em;
+            }
+            .monthly {
+                font-weight: normal;
+                padding-top: 1em;
+                font-size: 1.8em;
+            }
+            .buy-now-cta{
+                color: white;
+                background: #0b3c5d; 
+                text-decoration: none;
+                padding: 0;
+                font-size: 1em;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 4em;
+                width: 10em;
+            }
+        }
+    }
+
+    .try-free-section{
+        width: 1600px;
+        height: 450px;
+        background: 
+            linear-gradient(
+                rgba(11, 60, 93, 0.85), 
+                rgba(11, 60, 93, 0.85)
+            ),
+            url("http://csci571.com/hw/hw3/images/notebook.jpg");
+        background-size: cover;
+        background-size: 100%;
+        background-position:center;
+
+        text-align: center;
+        color: white;
+        h4{
+            margin-top: 120px;
+            margin-bottom: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+        }
+        blockquote{
+            margin-top:0;
+            margin-bottom: 2.7em;
+            font-size: 0.95em;
+        }
+        .try-now-cta{
+            background: var(--primary-color); 
+            text-decoration: none;
+            padding: 0;
+            font-size: 0.9em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 4em;
+            width: 16em;
+        }
+    }
+
+    .contact-section{
+        padding: 0;
+        margin: 0;
+        background: #1d2530;
+        text-align: center;
+        width: 1600px;
+        height: 380px;
+        
+        h3{
+            color: white;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            padding-top: 6em;
+            font-weight: normal;
+        }
+        p{
+            margin-top: 0;
+            padding-top: 0;
+            color:#939497;
+            font-size: 1em;
+        }
+        ul{
+            margin-top: 2.5em;
+            li{
+                display: inline;
+                margin: 1.3em;
+            }
+            a{
+                text-decoration:none
+            }
+            img{
+                text-decoration: none;
+            }
+        }
+    }

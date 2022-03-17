@@ -1,0 +1,33 @@
+<div *ngIf="!isEmpty()">
+    <table class="table table-hover" id="favTable">
+        <thead>
+            <tr>
+                <!-- <th *ngFor="let column of headers">
+                    {{column}}
+                </th> -->
+
+                <th style="width: 12%">#</th>
+                <th style="width: 37%">City</th>
+                <th style="width: 32%">State</th>
+                <th style="width: 31%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of fav_data;let indexOfelement=index;">
+                <!-- {{row|json}} -->
+                <td (click)="searchFav(row)">{{indexOfelement+1}}</td>
+                <td (click)="searchFav(row)"><a [routerLink]="">{{row.city}}</a></td>
+                <td (click)="searchFav(row)"><a [routerLink]="">{{row.state}}</a></td>
+                <td><a (click)="deleteFav(indexOfelement)"><i class="bi bi-trash-fill"></i></a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="isEmpty()">
+    <div class="alert alert-warning warn-div" role="alert">
+        <span class="sorry">Sorry!</span> No records found.
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.required_asterisk {
+    color: red;
+}
+.inputAlert {
+    color: red;
+  }
+
+.form-container {
+    margin-top: 2em;
+    background-color: #f4f3f4;  
+}
+form {
+    max-width: 850px;
+    margin:auto;
+    padding: 1.5rem;
+}
+.form-title {
+    text-align: center;
+}
+
+.form-title h3 {
+    font-weight:600;
+    font-size:larger;
+}
+.btn-text {
+    padding-left: 0.3rem;
+}
+
+/* .material-icons {
+    display:inline-flex;
+    vertical-align:top;
+} */
+
+.btn {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.5rem;
+}
+
+#clear-btn{
+    background-color: #f8f9fa;
+    border: 1px solid black;
+}

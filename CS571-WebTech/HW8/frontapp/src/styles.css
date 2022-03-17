@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url('https://unpkg.com/bootstrap@4.0.0-alpha.2/dist/css/bootstrap.min.css'); */
+
+/* body {
+
+    max-width: 1200px;
+    margin: auto;
+  }
+  @media (min-width: 828px) {
+    body {
+      
+    }
+  } */
+
+  html, body { 
+    height: 100%; 
+
+    }
+    body { 
+        margin: auto; 
+        /* font-family: Roboto, "Helvetica Neue", sans-serif;  */
+        max-width: 1000px;
+        
+    }
+
+    
+/* body {
+    padding: .5rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        padding: 2rem;
+      }
+} */

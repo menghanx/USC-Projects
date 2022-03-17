@@ -1,0 +1,10 @@
+/bin/
+/output.txt
+/calibration.txt
+testcases/*
+/testcases/
+/Draft
+/rules.txt
+/next_input.txt
+/cali_playdata.txt
+/initial_input.txt

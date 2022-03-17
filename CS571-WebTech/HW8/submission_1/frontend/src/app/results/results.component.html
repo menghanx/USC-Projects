@@ -1,0 +1,97 @@
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
+<!-- If weather data was updated and valid display result-->
+<div *ngIf="(weatherData | json) != ({} | json) && weatherData.valid">
+    <div *ngIf="visible" [@slideInOut]>
+        <h3>Forecast at {{weatherData.address}}</h3>
+        <div class="fav_div" style="text-align: right;">
+            <button type="button" class="btn btn-default" (click)="toggleFav()">
+                <i *ngIf="!isFav" class="bi bi-star"></i>
+                <i *ngIf="isFav" class="bi bi-star-fill text-warning"></i>
+            </button>
+            <button type="button" class="btn" (click)="toggleDetail(weatherData.data['1d'][0])">
+                details
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+        <p> </p>
+        <ul ngbNav #nav="ngbNav" class="nav-tabs justify-content-end">
+            <li ngbNavItem>
+                <a ngbNavLink>Day View</a>
+                <ng-template ngbNavContent>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let column of headers">
+                                    {{column}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of weatherData.data['1d'];let indexOfelement=index;">
+                                <!-- {{row|json}} -->
+                                <td>{{indexOfelement+1}}</td>
+                                <td><a [routerLink]="" (click)="toggleDetail(row)">{{getDate(row.startTime) |
+                                        date:'EEEE,
+                                        dd MMM
+                                        yyyy'}}</a>
+                                </td>
+                                <td>
+                                    <img class="table_row_icon" src={{imagePath(row.values.weatherCode)}} alt="image">
+                                    {{status(row.values.weatherCode)}}
+                                </td>
+                                <td>{{row.values.temperatureMax}}</td>
+                                <td>{{row.values.temperatureMin}}</td>
+                                <td>{{row.values.windSpeed}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </ng-template>
+            </li>
+            <li ngbNavItem>
+                <a ngbNavLink>Daily Temp. Chart</a>
+                <ng-template ngbNavContent>
+                    <app-chart-one></app-chart-one>
+                </ng-template>
+            </li>
+            <li ngbNavItem>
+                <a ngbNavLink>Meteogram</a>
+                <ng-template ngbNavContent>
+                    <app-chart-two></app-chart-two>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+    <div *ngIf="!visible" [@slideInOut]>
+        <div class="detail-container">
+            <button type="button" class="btn btn-outline-dark" style="display: inline; float: left;"
+                (click)="toggleDetail({})">
+                <i class="bi bi-chevron-left"></i>
+                List
+            </button>
+
+            <h2 style="display: inline;">{{getDate(detailData.startTime) | date:'EEEE, dd MMM yyyy'}}</h2>
+
+            <!-- <button type="button" class="btn btn-primary" style="display: inline;float: right;">
+                <i class="bi bi-twitter"></i>
+            </button> -->
+            <a type="button" class="btn btn-primary" id="tweet-btn" href={{tweet}} target="_blank" data-size="large"
+                style="display: inline;float: right;">
+                <i class="bi bi-twitter"></i>
+            </a>
+        </div>
+
+        <app-detail></app-detail>
+    </div>
+</div>
+
+<!-- If weather data was updated and invalid, display warning -->
+<div *ngIf="(weatherData | json) != ({} | json) && !weatherData.valid">
+    <div class="alert alert-danger" role="alert">
+        An error occured please try again later
+    </div>
+</div>

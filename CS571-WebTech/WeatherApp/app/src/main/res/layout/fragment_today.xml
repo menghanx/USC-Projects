@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentToday"
+    >
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:columnCount="3"
+        app:orientation="horizontal"
+        android:background="@color/color_background"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/weather_windy"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_windspeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wind Speed"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/gauge_low"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pressure"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/weather_pouring"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_precipitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precipitation"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/thermometer_low"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/details_status_icon"
+                android:layout_width="@dimen/grid_center_icon_height"
+                android:layout_height="@dimen/grid_center_icon_height"
+                android:src="@drawable/ic_cloudy"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloudy"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/water_percent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/eye_outline"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_visibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visibility"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/weather_fog"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_cloudcover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloud Cover"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/grid_height"
+            app:layout_columnWeight="1"
+            android:background="@color/card_section_background"
+            android:layout_marginLeft="@dimen/grid_horizontal_margin"
+            android:layout_marginRight="@dimen/grid_horizontal_margin"
+            android:layout_marginTop="@dimen/grid_vertical_margin"
+            android:layout_marginBottom="@dimen/grid_vertical_margin"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/grid_icon_height"
+                android:layout_height="@dimen/grid_icon_height"
+                android:src="@drawable/earth"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/grid_icon_top_margin"/>
+
+            <TextView
+                android:id="@+id/details_ozone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.345 mph"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text1_top_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ozone"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="@dimen/grid_text_size"
+                android:layout_marginTop="@dimen/grid_text2_top_margin"/>
+        </LinearLayout>
+
+
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+</FrameLayout>

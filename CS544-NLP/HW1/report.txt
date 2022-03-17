@@ -1,0 +1,95 @@
+HW1 Report - Menghan Xu
+Python version: 3.8.8
+
+Note:
+	pre-processing, I was not able to install contraction or pycontraction using pip, so had to create a json as dictionary for contraction.
+
+Three sample reviews in raw format:
+	1. Very Nice!!  Exactly as described!!!!!
+	2. Easy to use.  Ice cream in 20 minutes, couldn't be better.
+	3. Even though this product works great, the edge can break or crack easily. The edge is where the glass doubles back to create the space between the two walls. When you have any liquids in the cup, all that weight is being cantilevered from the outer wall to the inner wall, i.e. suspended. So, if you happen to bump or shake the cup while it is full, that puts a lot of stress on that edge. I've had 1 cup chip. I also bought the water jug but that one just broke when I bumped it against the sink after filling it. Yea, the worst possible scenario. So, if you are willing to pay for the great looks and functionality buy this but do expect that they won't last as other cups that cost less.<br /><br />The double wall really does insulate the contents, hot or cold. So, your contents last longer and your hand does not get hot or cold. Great for ice cream and tea. Their tea pot is also very good. I haven't broken that one......yet.
+
+Statistics about raw data:
+	Review count by stars:
+		star 5: 3124759
+		star 4: 731733
+		star 3: 349547
+		star 2: 241948
+		star 1: 426900
+	Raw data classification:
+		Positive review: 3856492
+		Negative review: 668848
+		
+Average review length before cleaning: 
+	324.359335
+	
+Average review length after cleaning，before pre-processing: 
+	310.915845
+
+Average review length after cleaning & pre-processing: 
+	191.15878
+	
+Three sample reviews after cleaning & preprocessing:
+	1. nice exactly described 
+	2. easy use ice cream minute could better 
+	3. even though product work great edge break crack easily edge glass double back create space two wall liquid cup weight cantilevered outer wall inner wall e suspended happen bump shake cup full put lot stress edge cup chip also bought water jug one broke bumped sink filling yea worst possible scenario willing pay great look functionality buy expect last cup cost le double wall really insulate content hot cold content last longer hand get hot cold great ice cream tea tea pot also good broken one yet 
+
+
+Following output are in the order of Accuracy, Precision, Recall, and f1-score	
+
+Perceptron
+	In this model I set iteration to be 1000 and learning rate to be 0.1
+	Output:
+		train dataset:
+			0.89514375
+			0.8751737658171449
+			0.9215438508695108
+			0.8977604436454494
+		test dataset:
+			0.8549
+			0.8358918817103033
+			0.8844544095665172
+			0.8594877257541278
+			
+SVM
+	In SVM model, I used LinearSVC and tolerance=1e-5 for fit to converge faster
+	Output:
+		train dataset:
+			0.9324
+			0.9334688040942274
+			0.9310396597022395
+			0.93225264951269
+		test dataset:
+			0.8939
+			0.894899690587883
+			0.8934728450423518
+			0.894185698613743
+			
+Logistic Regression
+	In this model I set max iteration to be 500
+	Output:
+		train dataset:
+			0.91286875
+			0.9161820910960027
+			0.9087201301138497
+			0.9124358547569547
+		test dataset:
+			0.896475
+			0.8996437352601736
+			0.8933233682112606
+			0.8964724118102952
+
+Multinomial Naive Bayes
+	In this model all parameters are default
+	Output:
+		train dataset:
+			0.88603125
+			0.8907566218664099
+			0.8797572876266734
+			0.8852227880130671
+		test dataset:
+			0.8674
+			0.8739363857374393
+			0.8597409068261086
+			0.8667805294619984
+			

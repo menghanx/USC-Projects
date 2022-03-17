@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:drawable="@color/black"/>
+
+    <item
+        android:drawable="@drawable/ic_launcher_foreground"
+        android:gravity="center"
+        />
+
+    <item android:drawable="@drawable/ic_powered_by_tomorrow_white"
+        android:gravity="bottom"
+        android:top="0dp"
+        android:bottom="100dp"
+        android:right="30dp"
+        android:left="30dp"/>
+
+</layer-list>

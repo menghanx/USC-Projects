@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#FF2D2D2D</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="indicator_inactive">#ABABAB</color>
+    <color name="color_background">#2c2c2a</color>
+    <color name="card_section_background">#262624</color>
+    <color name="weahter_status">#8d8d8b</color>
+    <color name="unselected_tab_color">#989898</color>
+</resources>

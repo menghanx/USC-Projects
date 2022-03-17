@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_height">180dp</dimen>
+    <dimen name="grid_icon_height">65dp</dimen>
+    <dimen name="grid_center_icon_height">100dp</dimen>
+    <dimen name="grid_text_size">19dp</dimen>
+    <dimen name="grid_vertical_margin">4dp</dimen>
+    <dimen name="grid_horizontal_margin">3dp</dimen>
+    <dimen name="grid_icon_top_margin">20dp</dimen>
+    <dimen name="grid_text1_top_margin">15dp</dimen>
+    <dimen name="grid_text2_top_margin">5dp</dimen>
+</resources>

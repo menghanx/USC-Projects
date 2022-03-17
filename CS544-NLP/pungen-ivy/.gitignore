@@ -1,0 +1,11 @@
+logs
+models
+results
+__pycache__
+*.pyc
+.cache
+.idea
+fairseq
+data.sh
+*.pkl
+data/real
