@@ -8,22 +8,24 @@ public class KMeansClustering {
 	public static void main(String[] args) {
 		
 		double[][] cluster1 = { 
-				{1, 1}, {3.6, 2},{2.6, 1.8}	
+				{1, 1}
 		};
 		
 		double[][] cluster2 = { 
-				{7, 7},{6.4, 6.6},{5.5, 4.0},{6.5, 5.0}
+				{7, 7}
 		};
 		
 		Data centroid1 = new Data(findCentroid(cluster1));
 		Data centroid2 = new Data(findCentroid(cluster2));
-		System.out.println("Centroid 1:" + centroid1);
-		System.out.println("Centroid 2:" + centroid2);
+		
 		
 		Data candidate = new Data(new double[]
 				{2.6, 1.8});
-		System.out.println("candidate:" + candidate);
 		
+		
+		System.out.println("Centroid 1:" + centroid1);
+		System.out.println("Centroid 2:" + centroid2);
+		System.out.println("candidate:" + candidate);
 		System.out.println("ED to " + centroid1.toString() + " " + ComputeEuclideanDistance(centroid1, candidate));
 		System.out.println("ED to " + centroid2.toString() + " " + ComputeEuclideanDistance(centroid2, candidate));
 		
